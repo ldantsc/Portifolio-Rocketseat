@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    text-rendering: optimizeLegibility; 
+    font-weight: 400;
+    display: grid;
+    grid-template: "nav main main" 
+                   "nav main main"
+                   "foot foot foot";
+              grid-template-columns: 1fr 4fr;  
+    background-color: #22212C;
+    color: #837E9F  ;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-profile-container {
+    padding: 2rem;
+}
+
+nav div:not(.link-container div, .technologies-container div) {
+    display: flex;
+    flex-direction: column;
+    background-color: #302F3D;
+    box-shadow: 3px 4px 0.8rem 0 rgba(15, 15, 15, 0.699);
+    border-radius: 0.8rem;
+}
+
+.profile-container {
+    width: 348px;
+    height: 292px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#profile-photo {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    border: 2px solid #00FF00;
+    margin-bottom: 18px;
+}
+
+.profile-name {
+    font-size: 28px;
+}
+
+.profile-occupation {
+    font-size: 12px;
+}
+
+nav div img {
+    width: 24px;
+    height: 24px;
+}
+
+.link-container {   
+    display: flex;
+    justify-content: center;    
+    gap: 1rem;
+    width: 348px;
+    height: 348px;
+}
+
+.link-container div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 32px;
+
+}
+
+.link-container div a {
+    color: #837E9F;
+    text-decoration: none;
+    align-self: center;
+}
+
+.technologies-container {
+    width: 348px;
+    height: auto;
+    gap: 1.8rem;
+}
+
+.technologies-container h2, .experience-container h2, .education-container h2 {
+    margin: 24px 18px 0;
+}
+
+.a-tec-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    gap: 10px;
+}
+
+.a-tec-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: 700;
+    border-radius: 0.8rem;
+    background-color: #CB92B1;
+    box-shadow: 1px 1px 1rem 0 rgba(0, 0, 0, 0.1);
+    color: #22212C;
+    width: 84px;
+    height: 24px;
+    text-decoration: none;
+}
+
+.experience-container {
+    width: 348px;
+    height: auto;
+}
+
+.experience-container ul, .education-container ul  {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 4rem;
+    font-size: 14px;
+}
+
+.education-container ul strong {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.education-container {
+    width: 348px;
+    height: auto;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main div {
+    display: flex;
+    align-items: center;
+    background-color: #302F3D;
+    box-shadow: 3px 4px 0.8rem 0 rgba(15, 15, 15, 0.699);
+    border-radius: 0.8rem;
+    height: 64px;
+}
+
+.main-profile-container {
+    padding: 2rem;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-container h2, .project-container a, .posts-container h2{
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.project-container a {
+    color: #837E9F;
+    font-size: 12px;
+}
+
+footer {
+    grid-area: foot;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 12px;
+}
